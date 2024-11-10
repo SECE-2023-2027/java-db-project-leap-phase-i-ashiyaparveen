@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 public class DBconnection {
 	Connection con = null;
 	
-	String url="jdbc:mysql://localhost:3306/BankApplication5";
+	String url="jdbc:mysql://localhost:3306/bank01";
 	
 	String userName="root";
 	
@@ -19,7 +19,7 @@ public class DBconnection {
 		con=DriverManager.getConnection(url,userName,password);
 		System.out.println("Connection Established successfully");
 	}catch(Exception e) {
-		System.out.println("Exception Occurred");
+		System.out.println("Exception Occurred"+e);
 	}
 		
 	}
@@ -30,5 +30,4 @@ public class DBconnection {
 	   DBconnection connect = new DBconnection();
 	   Connection con = connect.getConnect();
    }
-
 }

@@ -3,12 +3,14 @@ package user;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Admin {
-    private int id;
-    private String username;
-    private String password;
+	public int id;
+	public String username;
+	public String password;
+	public Object userName;
 
     public Admin() {}
   
@@ -16,7 +18,7 @@ public class Admin {
         this.id = id;
         this.username = username;
         this.password = password;
-    }
+        }
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
@@ -38,9 +40,14 @@ public class Admin {
 	}
 
 
-int login(String username, String password) {
+public int login(String username, String password) {
 	AdminDBcalls admindbcalls=new AdminDBcalls();
 	return admindbcalls.checkLogin(username,password);
 	
+    }
+
+public void viewAllAccounts(HashMap<String, Account> details) {
+	// TODO Auto-generated method stub
+	
 }
-}
+    }

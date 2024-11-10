@@ -25,4 +25,10 @@ public class AdminDBcalls{
 		}
 		return 0;
 	}
+
+	public int CreateAccount(long accountNumber, String userName, String accountType, double balance, String password,
+			long phoneNumber, String address, String branchName) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
